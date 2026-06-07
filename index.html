@@ -3,25 +3,41 @@
 <head>
     <meta charset="UTF-8">
     
-    <meta property="og:title" content="PON AQUÍ EL TÍTULO QUE QUIERAS" />
+    <meta property="og:title" content="PON AQUÍ TU TÍTULO" />
     <meta property="og:description" content="Pon aquí una descripción corta" />
     <meta property="og:image" content="https://i.ibb.co/tM5wpGRc/imagen-convertida.jpg" />
     <meta property="og:type" content="website" />
     
     <title>Cargando...</title>
+
+    <style>
+        /* Esto hace que la foto ocupe toda la pantalla de forma limpia */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000; /* Fondo negro por si la foto no ocupa todo */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+    </style>
 </head>
 <body>
-    <p style="font-family: sans-serif; text-align: center; margin-top: 50px;">
-        Procesando solicitud...
-    </p>
 
     <script>
-        // Esto bloquea la página al instante y lanza tu pregunta
+        // Primero salta tu pregunta
         var respuesta = confirm("¿Te gustan los therians?");
         
         if (respuesta == true) {
-            // SI LE DAN A ACEPTAR: Los mandas a la web que quieras
-            window.location.href = "https://www.google.com";
+            // SI LE DAN A ACEPTAR: Se cierra el cartelito y verán la foto del hámster puesta en la web
+            // (No tocamos nada, se queda en esta página)
         } else {
             // SI LE DAN A CANCELAR: Los echa para atrás
             if (window.history.length > 1) {
@@ -31,5 +47,8 @@
             }
         }
     </script>
+
+    <img src="https://i.ibb.co/tM5wpGRc/imagen-convertida.jpg" alt="Hámster">
+
 </body>
 </html>
