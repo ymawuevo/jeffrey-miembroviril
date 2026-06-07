@@ -3,38 +3,33 @@
 <head>
     <meta charset="UTF-8">
     
-    <meta property="og:title" content="PON AQUÍ EL TÍTULO QUE QUIERAS QUE SE LEA" />
-    <meta property="og:description" content="Pon aquí un texto corto descriptivo" />
-    <meta property="og:image" content="https://raw.githubusercontent.com/ymawuevo/jeffrey-miembroviril/main/imagen_convertida.jpg" />
+    <meta property="og:title" content="PON AQUÍ EL TÍTULO QUE QUIERAS" />
+    <meta property="og:description" content="Pon aquí una descripción corta" />
+    <meta property="og:image" content="https://i.ibb.co/tM5wpGRc/imagen-convertida.jpg" />
     <meta property="og:type" content="website" />
     
     <title>Cargando...</title>
-
-    <script>
-        // Esta función se ejecuta en cuanto se abre la página
-        window.onload = function() {
-            // Aquí personalizas la pregunta que les va a salir en la ventanita
-            var respuesta = confirm("¿te gustan los therians?");
-            
-            if (respuesta == true) {
-                // SI LE DAN A ACEPTAR: Los manda a la web que tú quieras
-                window.location.href = "https://www.google.com";
-            } else {
-                // SI LE DAN A CANCELAR: Los echa para atrás en el historial del navegador
-                window.history.back();
-                
-                // Por si acaso están en una pestaña nueva y no pueden ir "atrás", 
-                // los mandas a una página en blanco o a cualquier otro sitio inocuo:
-                setTimeout(function(){
-                    window.location.href = "https://www.google.com/blank";
-                }, 100);
-            }
-        }
-    </script>
 </head>
 <body>
     <p style="font-family: sans-serif; text-align: center; margin-top: 50px;">
         Procesando solicitud...
     </p>
+
+    <script>
+        // Esto bloquea la página al instante y lanza tu pregunta
+        var respuesta = confirm("¿Te gustan los therians?");
+        
+        if (respuesta == true) {
+            // SI LE DAN A ACEPTAR: Los mandas a la web que quieras
+            window.location.href = "https://www.google.com";
+        } else {
+            // SI LE DAN A CANCELAR: Los echa para atrás
+            if (window.history.length > 1) {
+                window.history.back();
+            } else {
+                window.location.href = "about:blank";
+            }
+        }
+    </script>
 </body>
 </html>
