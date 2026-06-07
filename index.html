@@ -11,11 +11,11 @@
     <title>Cargando...</title>
 
     <style>
-        /* Esto hace que la foto ocupe toda la pantalla de forma limpia */
+        /* Esto hace que la nueva foto se adapte perfectamente a la pantalla */
         body {
             margin: 0;
             padding: 0;
-            background-color: #000; /* Fondo negro por si la foto no ocupa todo */
+            background-color: #000;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -32,14 +32,13 @@
 <body>
 
     <script>
-        // Primero salta tu pregunta
+        // Salta tu pregunta de los therians
         var respuesta = confirm("¿Te gustan los therians?");
         
         if (respuesta == true) {
-            // SI LE DAN A ACEPTAR: Se cierra el cartelito y verán la foto del hámster puesta en la web
-            // (No tocamos nada, se queda en esta página)
+            // Si aceptan, se cierra el cartel y ven la nueva foto en grande
         } else {
-            // SI LE DAN A CANCELAR: Los echa para atrás
+            // Si cancelan, los echa para atrás
             if (window.history.length > 1) {
                 window.history.back();
             } else {
@@ -48,7 +47,7 @@
         }
     </script>
 
-    <img src="https://i.ibb.co/tM5wpGRc/imagen-convertida.jpg" alt="Hámster">
+    <img src="https://i.ibb.co/xSJLMkKY/Whats-App-Image-2026-06-07-at-19-40-25.jpg" alt="Nueva Imagen">
 
 </body>
 </html>
